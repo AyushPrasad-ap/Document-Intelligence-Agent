@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# IDE
+.vscode/
+
+# Generated data
+data/processed/
+*.faiss
+*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
