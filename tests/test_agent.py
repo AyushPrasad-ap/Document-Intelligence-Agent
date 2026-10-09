@@ -169,7 +169,7 @@ def test_financial_branch_uses_search_and_preserves_sources(
 
     mock_tool_search.assert_called_once_with(
         "HDFC Bank net profit FY25",
-        top_k=5,
+        top_k=3,
     )
 
     mock_graph_search.assert_called_once_with(

@@ -1,0 +1,135 @@
+
+[
+  {
+    "id": "E01",
+    "category": "financial_retrieval",
+    "question": "What was HDFC Bank's net profit in FY25?",
+    "expected_answer_points": [
+      "Net profit was approximately 67347.4 crore rupees"
+    ],
+    "expected_sources": [
+      {
+        "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+        "pages": [5, 15, 203]
+      }
+    ],
+    "expected_tools": ["financial_search"]
+  },
+  {
+    "id": "E02",
+    "category": "financial_retrieval",
+    "question": "What was HDFC Bank's net profit in FY24?",
+    "expected_answer_points": [
+      "Net profit was approximately 60812.3 crore rupees"
+    ],
+    "expected_sources": [
+      {
+        "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+        "pages": [203]
+      }
+    ],
+    "expected_tools": ["financial_search"]
+  },
+  {
+    "id": "E03",
+    "category": "financial_retrieval",
+    "question": "What was HDFC Bank's net interest margin in FY25?",
+    "expected_answer_points": [
+      "Net interest margin was 3.48 percent"
+    ],
+    "expected_sources": [
+      {
+        "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+        "pages": [38, 203]
+      }
+    ],
+    "expected_tools": ["financial_search"]
+  },
+  {
+    "id": "E04",
+    "category": "financial_retrieval",
+    "question": "What was HDFC Bank's capital adequacy ratio in FY25?",
+    "expected_answer_points": [
+      "Capital adequacy ratio was 19.6 percent"
+    ],
+    "expected_sources": [
+      {
+        "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+        "pages": [8, 38]
+      }
+    ],
+    "expected_tools": ["financial_search"]
+  },
+  {
+    "id": "E05",
+    "category": "calculation",
+    "question": "What is 14% of 250?",
+    "expected_answer_points": [
+      "The result is 35"
+    ],
+    "expected_sources": [],
+    "expected_tools": ["calculator"]
+  },
+  {
+    "id": "E06",
+    "category": "calculation",
+    "question": "What is the absolute difference between 67347.4 and 60812.3?",
+    "expected_answer_points": [
+      "The result is 6535.1"
+    ],
+    "expected_sources": [],
+    "expected_tools": ["calculator"]
+  },
+  {
+    "id": "E07",
+    "category": "multi_step",
+    "question": "What was HDFC Bank's net profit growth from FY24 to FY25, and what was the absolute increase?",
+    "expected_answer_points": [
+      "FY25 net profit was 67347.4 crore rupees",
+      "FY24 net profit was 60812.3 crore rupees",
+      "Absolute increase was 6535.1 crore rupees",
+      "Growth was approximately 10.7 percent"
+    ],
+    "expected_sources": [
+      {
+        "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+        "pages": [203]
+      }
+    ],
+    "expected_tools": ["financial_search", "calculator"]
+  },
+  {
+    "id": "E08",
+    "category": "general",
+    "question": "What can you help me with?",
+    "expected_answer_points": [
+      "Can search financial documents",
+      "Can perform calculations",
+      "Can answer general questions"
+    ],
+    "expected_sources": [],
+    "expected_tools": []
+  },
+  {
+    "id": "E09",
+    "category": "unsupported",
+    "question": "What was Tesla's FY2025 net profit according to the uploaded documents?",
+    "expected_answer_points": [
+      "Must acknowledge that the uploaded documents do not establish this fact",
+      "Must not invent a document citation"
+    ],
+    "expected_sources": [],
+    "expected_tools": ["financial_search"]
+  },
+  {
+    "id": "E10",
+    "category": "unsupported",
+    "question": "What was HDFC Bank's net profit in FY2020 according to the uploaded documents?",
+    "expected_answer_points": [
+      "Must acknowledge when the requested figure cannot be established from the retrieved evidence",
+      "Must not invent a figure or citation"
+    ],
+    "expected_sources": [],
+    "expected_tools": ["financial_search"]
+  }
+]

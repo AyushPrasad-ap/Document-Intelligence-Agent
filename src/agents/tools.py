@@ -21,7 +21,7 @@ def financial_search(query: str) -> str:
     if not query or not query.strip():
         return "Search query cannot be empty."
 
-    results = search(query.strip(), top_k=5)
+    results = search(query.strip(), top_k=3)
 
     if not results:
         return "No relevant financial documents were found."
@@ -32,6 +32,10 @@ def financial_search(query: str) -> str:
         document = result["document"]
         metadata = document.metadata
 
+        content = document.page_content.strip()
+        if len(content) > 800:
+            content = content[:800].rsplit(" ", 1)[0] + " ..."
+
         formatted_results.append(
             f"""[{index}]
 Source: {metadata["source"]}
@@ -39,7 +43,7 @@ Page: {metadata["page"]}
 Document type: {metadata["document_type"]}
 Relevance score: {result["score"]:.4f}
 
-{document.page_content}
+{content}
 """
         )
 

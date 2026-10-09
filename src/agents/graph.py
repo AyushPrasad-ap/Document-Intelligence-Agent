@@ -1,6 +1,11 @@
 from functools import lru_cache
 
-from langchain_core.messages import AIMessage, SystemMessage
+from langchain_core.messages import (
+    AIMessage,
+    HumanMessage,
+    SystemMessage,
+    ToolMessage,
+)
 from langgraph.graph import END, START, StateGraph
 from langgraph.prebuilt import ToolNode, tools_condition
 
@@ -38,6 +43,11 @@ Rules:
 - Do not recalculate, approximate, or alter calculator results.
 - Do not create citations such as 【calculator†result】.
 - Only use numeric application citations such as [1], [2], [3].
+- Avoid repeating the same search query or equivalent queries.
+- For an unsupported question, search the document collection and
+  then clearly state when the retrieved evidence does not establish
+  the requested fact.
+- Do not keep searching merely to force an answer when evidence is absent.
 """
 
 
@@ -53,29 +63,106 @@ def get_agent_model():
     return get_llm().bind_tools(TOOLS)
 
 
+def build_finalization_messages(state: AgentState) -> list:
+    """Build a concise, tool-free prompt for final answer synthesis."""
+
+    evidence_blocks = []
+    remaining_chars = 5000
+
+    # Include tool results, not the previous assistant tool-call messages.
+    for message in reversed(state.get("messages", [])):
+        if not isinstance(message, ToolMessage):
+            continue
+
+        if remaining_chars <= 0:
+            break
+
+        content = str(message.content)
+        content = content[:remaining_chars]
+
+        tool_name = getattr(message, "name", None) or "tool"
+
+        evidence_blocks.append(f"Tool result ({tool_name}):\n{content}")
+
+        remaining_chars -= len(content)
+
+    evidence_blocks.reverse()
+
+    evidence = (
+        "\n\n---\n\n".join(evidence_blocks)
+        if evidence_blocks
+        else "No tool results are available."
+    )
+
+    source_lines = []
+
+    for source in state.get("sources", []):
+        source_lines.append(
+            f"[{source['citation_id']}] {source['source']}, page {source['page']}"
+        )
+
+    source_mapping = (
+        "\n".join(source_lines)
+        if source_lines
+        else "No document sources were retrieved."
+    )
+
+    return [
+        SystemMessage(
+            content=(
+                "You are the final-answer synthesizer for a financial "
+                "document intelligence application. You have no tools "
+                "available in this step. Do not request or invent tool "
+                "calls. Answer the original question using only the "
+                "provided tool results. If the evidence does not "
+                "establish the requested fact, say so clearly. "
+                "Use calculator results exactly as returned. Do not "
+                "recalculate or change numerical results. Use only "
+                "numeric citations that match the authoritative source "
+                "mapping. Never invent citations, source names, or pages."
+            )
+        ),
+        HumanMessage(
+            content=(
+                f"Original question:\n{state.get('question', '')}\n\n"
+                f"Available tool results:\n{evidence}\n\n"
+                f"Authoritative source mapping:\n{source_mapping}\n\n"
+                "Produce the final answer only."
+            )
+        ),
+    ]
+
+
 def call_model(state: AgentState):
-    """Ask the LLM to decide whether a tool is required."""
+    """Choose tools when permitted, then synthesize a final answer."""
 
     messages = [
         SystemMessage(content=SYSTEM_PROMPT),
         *state.get("messages", []),
     ]
 
-    response = get_agent_model().invoke(messages)
+    tool_rounds = sum(
+        1
+        for message in state.get("messages", [])
+        if isinstance(message, AIMessage) and message.tool_calls
+    )
+
+    max_tool_rounds = 2
+
+    if tool_rounds >= max_tool_rounds:
+        response = get_llm().invoke(build_finalization_messages(state))
+    else:
+        response = get_agent_model().invoke(messages)
 
     result = {
         "messages": [response],
     }
 
     if isinstance(response, AIMessage) and not response.tool_calls:
-        raw_answer = response.content
-
-        normalized_answer = normalize_citations(
-            raw_answer,
+        result["answer"] = normalize_citations(
+            response.content,
             state.get("sources", []),
         )
-
-        result["answer"] = normalized_answer
 
     return result
 
