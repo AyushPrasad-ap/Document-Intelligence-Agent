@@ -282,6 +282,26 @@ Reports:
 - Review `git status` before committing to ensure secrets, temporary backups, virtual environments, Python caches, and unintended generated files are not included.
 - Keep `data/processed/faiss_store/index.faiss` and `metadata.json` available because the current Dockerfile expects them at build time.
 
+
+## Screenshots
+
+### Streamlit application
+
+The application answers questions using the indexed financial
+documents and displays source citations and tool usage.
+
+![Document Intelligence Agent demo](docs/screenshots/streamlit-demo.png)
+
+## Future Improvements
+
+- Support document uploads and controlled index updates.
+- Improve retrieval with hybrid search, reranking, and metadata filters.
+- Expand the evaluation dataset and manually verify answer correctness
+  and citation accuracy.
+- Add structured logging, performance monitoring, and clearer error handling.
+- Optimize Docker image size and embedding-model startup time.
+
+
 ## License and document rights
 
 No project license is declared in this README.
