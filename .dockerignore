@@ -1,0 +1,30 @@
+
+# Git and local environments
+.git/
+.venv/
+venv/
+.vscode/
+
+# Python caches and tests
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+tests/
+notebooks/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Unnecessary source data and generated artifacts
+data/raw/
+data/processed/chunks.json
+data/processed/embeddings.npy
+data/processed/retrieval_evaluation_results.json
+data/processed/answer_evaluation_results.json
+data/processed/evaluation_report.md
+
+# Backup files
+*.backup
+requirements.txt.backup

@@ -1,3 +1,4 @@
+from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
@@ -15,6 +16,7 @@ EMBEDDINGS_FILE = PROCESSED_DATA_DIR / "embeddings.npy"
 EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 
 
+@lru_cache(maxsize=1)
 def create_embedding_model() -> HuggingFaceEmbeddings:
     """
     Create the local Hugging Face embedding model.

@@ -1,0 +1,901 @@
+{
+  "dataset_questions": 10,
+  "automated_checks_passed": 10,
+  "automated_checks_review": 0,
+  "automated_pass_rate": 1.0,
+  "note": "Automated checks are screening signals, not a substitute for manually reviewing answer correctness and evidence.",
+  "results": [
+    {
+      "id": "E01",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's net profit in FY25?",
+      "expected_answer_points": [
+        "Net profit was approximately 67347.4 crore rupees"
+      ],
+      "answer": "HDFC Bank reported a net profit of about ₹ 67,347 crore for the financial year 2025 (FY25)[1].",
+      "expected_tools": [
+        "financial_search"
+      ],
+      "actual_tools": [
+        "financial_search"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "HDFC Bank net profit FY25"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 5\nDocument type: bank_annual_report\nRelevance score: 0.7973\n\nNote: The results for the year ended March 31, 2025 include the operations of HDFC Limited and its subsidiaries (which became subsidiaries \nof the Bank on amalgamation) effective from July 01, 2023 and hence are not comparable with results for the year ended March 31, 2024.\nYoY\nOur Performance\nBalance Sheet Size (I Cr)\n39,10,199\n 8.1%\n36,17,623\n39,10,199 \nDeposits (I Cr)\n27,14,715\n 14.1%\n23,79,786\n27,14,715\nDividend \nPer Share (I)\n22.0^\n19.5\n22.0\nProfit After Tax (I Cr)\n67,347\n 10.7%\n60,812\n67,347\nAdvances (I Cr)\n26,19,609\n 5.4%\n24,84,862\n26,19,609\nReturn on Assets  \n(Average) (%)\n1.91\n1.98\n1.91\nEarnings Per Share (I)\n88.3\n 2.9%\n85.8\n88.3 \nReturn on Equity (%)\n14.6\n16.1\n14.6\nCost to Income \nRatio (%)\n40.5\n40.2\n40.5\n FY25\n FY24\n^Proposed\nIntegrated Annual Report 2024-25\n03\nOverview\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank_annual_repo"
+        }
+      ],
+      "sources": [
+        {
+          "citation_id": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5,
+          "document_type": "bank_annual_report",
+          "score": 0.797289252281189,
+          "chunk_id": 9
+        },
+        {
+          "citation_id": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.7955056428909302,
+          "chunk_id": 124
+        },
+        {
+          "citation_id": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203,
+          "document_type": "bank_annual_report",
+          "score": 0.7919251322746277,
+          "chunk_id": 605
+        },
+        {
+          "citation_id": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 15,
+          "document_type": "bank_annual_report",
+          "score": 0.7803817987442017,
+          "chunk_id": 40
+        },
+        {
+          "citation_id": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 8,
+          "document_type": "bank_annual_report",
+          "score": 0.7711970806121826,
+          "chunk_id": 18
+        }
+      ],
+      "numeric_check": {
+        "applicable": true,
+        "passed": true,
+        "checks": [
+          {
+            "expected": 67347.4,
+            "tolerance": 0.5,
+            "matched": true
+          }
+        ],
+        "actual_numbers": [
+          67347.0,
+          2025.0
+        ]
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": true,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": true,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E02",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's net profit in FY24?",
+      "expected_answer_points": [
+        "Net profit was approximately 60812.3 crore rupees"
+      ],
+      "answer": "HDFC Bank reported a net profit of **₹ 60,812.3 crore** for the financial year 2023‑24 (FY 24)[2][3]",
+      "expected_tools": [
+        "financial_search"
+      ],
+      "actual_tools": [
+        "financial_search"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "HDFC Bank net profit FY24"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank_annual_report\nRelevance score: 0.7962\n\nYear ended March 31, 2025. The Net Interest \nMargin was at 3.48 per cent. \nThe Bank remains well-capitalised, reﬂected in \na Capital Adequacy Ratio of 19.6 per cent. As a \nresponsible bank, it has built a substantial cushion \nagainst any adverse impact with a Provision \nCoverage Ratio of 67.86 per cent. HDFC Bank \ncontinued to deliver value to shareholders, with a \nROE of 14.6 per cent. The Earnings Per Share (EPS) \nincreased by 2.9 per cent to J88.3, while dividend \nper share rose by 12.8 per cent to J22.0 in FY25.\n23,79,786 \n18,83,395 \n27,14,715 \nFY24\nFY25\nFY23\nDeposits (I Cr)\n27,14,715 \n40.2\n40.4\n40.5 \nFY24\nFY25\nFY23\nCost to Income Ratio (%)\n40.5  \n1.24\n1.12 \n1.33 \nFY24\nFY25\nFY23\nGross NPA Ratio (%)\n1.33  \nHDFC Bank Limited\n40\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 203\nDocument type: bank_annual_report\nRelevance score: 0.7743\n\nended March 31, 2025, "
+        }
+      ],
+      "sources": [
+        {
+          "citation_id": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.796172559261322,
+          "chunk_id": 124
+        },
+        {
+          "citation_id": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203,
+          "document_type": "bank_annual_report",
+          "score": 0.7743068933486938,
+          "chunk_id": 605
+        },
+        {
+          "citation_id": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5,
+          "document_type": "bank_annual_report",
+          "score": 0.7664605975151062,
+          "chunk_id": 9
+        },
+        {
+          "citation_id": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 8,
+          "document_type": "bank_annual_report",
+          "score": 0.7597033977508545,
+          "chunk_id": 18
+        },
+        {
+          "citation_id": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 443,
+          "document_type": "bank_annual_report",
+          "score": 0.756744384765625,
+          "chunk_id": 1447
+        }
+      ],
+      "numeric_check": {
+        "applicable": true,
+        "passed": true,
+        "checks": [
+          {
+            "expected": 60812.3,
+            "tolerance": 0.5,
+            "matched": true
+          }
+        ],
+        "actual_numbers": [
+          60812.3,
+          2023.0,
+          24.0,
+          24.0
+        ]
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": true,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": true,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E03",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's net interest margin in FY25?",
+      "expected_answer_points": [
+        "Net interest margin was 3.48 percent"
+      ],
+      "answer": "HDFC Bank’s net interest margin for the fiscal year ended 31 March 2025 was **3.48 %**[1]",
+      "expected_tools": [
+        "financial_search"
+      ],
+      "actual_tools": [
+        "financial_search"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "HDFC Bank net interest margin FY25"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank_annual_report\nRelevance score: 0.8345\n\nYear ended March 31, 2025. The Net Interest \nMargin was at 3.48 per cent. \nThe Bank remains well-capitalised, reﬂected in \na Capital Adequacy Ratio of 19.6 per cent. As a \nresponsible bank, it has built a substantial cushion \nagainst any adverse impact with a Provision \nCoverage Ratio of 67.86 per cent. HDFC Bank \ncontinued to deliver value to shareholders, with a \nROE of 14.6 per cent. The Earnings Per Share (EPS) \nincreased by 2.9 per cent to J88.3, while dividend \nper share rose by 12.8 per cent to J22.0 in FY25.\n23,79,786 \n18,83,395 \n27,14,715 \nFY24\nFY25\nFY23\nDeposits (I Cr)\n27,14,715 \n40.2\n40.4\n40.5 \nFY24\nFY25\nFY23\nCost to Income Ratio (%)\n40.5  \n1.24\n1.12 \n1.33 \nFY24\nFY25\nFY23\nGross NPA Ratio (%)\n1.33  \nHDFC Bank Limited\n40\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank_annual_report\nRelevance score: 0.7973\n\nFINANCIAL PERFORMANCE\nD"
+        }
+      ],
+      "sources": [
+        {
+          "citation_id": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.8344689607620239,
+          "chunk_id": 124
+        },
+        {
+          "citation_id": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.7972816228866577,
+          "chunk_id": 123
+        },
+        {
+          "citation_id": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 251,
+          "document_type": "bank_annual_report",
+          "score": 0.7836571931838989,
+          "chunk_id": 813
+        },
+        {
+          "citation_id": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 349,
+          "document_type": "bank_annual_report",
+          "score": 0.7788503766059875,
+          "chunk_id": 1150
+        },
+        {
+          "citation_id": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 499,
+          "document_type": "bank_annual_report",
+          "score": 0.7773598432540894,
+          "chunk_id": 1638
+        }
+      ],
+      "numeric_check": {
+        "applicable": true,
+        "passed": true,
+        "checks": [
+          {
+            "expected": 3.48,
+            "tolerance": 0.02,
+            "matched": true
+          }
+        ],
+        "actual_numbers": [
+          31.0,
+          2025.0,
+          3.48
+        ]
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": true,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": true,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E04",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's capital adequacy ratio in FY25?",
+      "expected_answer_points": [
+        "Capital adequacy ratio was 19.6 percent"
+      ],
+      "answer": "HDFC Bank’s capital adequacy ratio for FY 25 was **19.6 %**[1].",
+      "expected_tools": [
+        "financial_search"
+      ],
+      "actual_tools": [
+        "financial_search"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "HDFC Bank capital adequacy ratio FY25"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank_annual_report\nRelevance score: 0.8310\n\nYear ended March 31, 2025. The Net Interest \nMargin was at 3.48 per cent. \nThe Bank remains well-capitalised, reﬂected in \na Capital Adequacy Ratio of 19.6 per cent. As a \nresponsible bank, it has built a substantial cushion \nagainst any adverse impact with a Provision \nCoverage Ratio of 67.86 per cent. HDFC Bank \ncontinued to deliver value to shareholders, with a \nROE of 14.6 per cent. The Earnings Per Share (EPS) \nincreased by 2.9 per cent to J88.3, while dividend \nper share rose by 12.8 per cent to J22.0 in FY25.\n23,79,786 \n18,83,395 \n27,14,715 \nFY24\nFY25\nFY23\nDeposits (I Cr)\n27,14,715 \n40.2\n40.4\n40.5 \nFY24\nFY25\nFY23\nCost to Income Ratio (%)\n40.5  \n1.24\n1.12 \n1.33 \nFY24\nFY25\nFY23\nGross NPA Ratio (%)\n1.33  \nHDFC Bank Limited\n40\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 341\nDocument type: bank_annual_report\nRelevance score: 0.8182\n\nHDFC Bank Limited\n346\n"
+        }
+      ],
+      "sources": [
+        {
+          "citation_id": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.831028938293457,
+          "chunk_id": 124
+        },
+        {
+          "citation_id": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 341,
+          "document_type": "bank_annual_report",
+          "score": 0.8181537389755249,
+          "chunk_id": 1125
+        },
+        {
+          "citation_id": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.8004066348075867,
+          "chunk_id": 123
+        },
+        {
+          "citation_id": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 50,
+          "document_type": "bank_annual_report",
+          "score": 0.7986874580383301,
+          "chunk_id": 149
+        },
+        {
+          "citation_id": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 349,
+          "document_type": "bank_annual_report",
+          "score": 0.7953183054924011,
+          "chunk_id": 1150
+        }
+      ],
+      "numeric_check": {
+        "applicable": true,
+        "passed": true,
+        "checks": [
+          {
+            "expected": 19.6,
+            "tolerance": 0.1,
+            "matched": true
+          }
+        ],
+        "actual_numbers": [
+          25.0,
+          19.6
+        ]
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": true,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": true,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E05",
+      "category": "calculation",
+      "question": "What is 14% of 250?",
+      "expected_answer_points": [
+        "The result is 35"
+      ],
+      "answer": "14 % of 250 is 35.",
+      "expected_tools": [
+        "calculator"
+      ],
+      "actual_tools": [
+        "calculator"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "calculator",
+          "args": {
+            "expression": "0.14 * 250"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "35"
+        }
+      ],
+      "sources": [],
+      "numeric_check": {
+        "applicable": true,
+        "passed": true,
+        "checks": [
+          {
+            "expected": 35.0,
+            "tolerance": 0.001,
+            "matched": true
+          }
+        ],
+        "actual_numbers": [
+          14.0,
+          250.0,
+          35.0
+        ]
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": null,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": true,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E06",
+      "category": "calculation",
+      "question": "What is the absolute difference between 67347.4 and 60812.3?",
+      "expected_answer_points": [
+        "The result is 6535.1"
+      ],
+      "answer": "6535.1",
+      "expected_tools": [
+        "calculator"
+      ],
+      "actual_tools": [
+        "calculator"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "calculator",
+          "args": {
+            "expression": "abs(67347.4 - 60812.3)"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "Calculator error: Expression element Call is not allowed."
+        },
+        {
+          "type": "tool_call",
+          "name": "calculator",
+          "args": {
+            "expression": "67347.4 - 60812.3"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "6535.1"
+        }
+      ],
+      "sources": [],
+      "numeric_check": {
+        "applicable": true,
+        "passed": true,
+        "checks": [
+          {
+            "expected": 6535.1,
+            "tolerance": 0.1,
+            "matched": true
+          }
+        ],
+        "actual_numbers": [
+          6535.1
+        ]
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": null,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": true,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E07",
+      "category": "multi_step",
+      "question": "What was HDFC Bank's net profit growth from FY24 to FY25, and what was the absolute increase?",
+      "expected_answer_points": [
+        "FY25 net profit was 67347.4 crore rupees",
+        "FY24 net profit was 60812.3 crore rupees",
+        "Absolute increase was 6535.1 crore rupees",
+        "Growth was approximately 10.7 percent"
+      ],
+      "answer": "HDFC Bank’s net profit rose from **₹ 60,812.3 crore in FY 2023‑24** to **₹ 67,347.4 crore in FY 2024‑25**, a **10.7 % increase** year‑on‑year[2][3]. \n\nThe absolute rise in profit is **₹ 6,535.1 crore** (₹ 67,347.4 crore − ₹ 60,812.3 crore).",
+      "expected_tools": [
+        "calculator",
+        "financial_search"
+      ],
+      "actual_tools": [
+        "calculator",
+        "financial_search"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "HDFC Bank net profit FY24"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank_annual_report\nRelevance score: 0.7962\n\nYear ended March 31, 2025. The Net Interest \nMargin was at 3.48 per cent. \nThe Bank remains well-capitalised, reﬂected in \na Capital Adequacy Ratio of 19.6 per cent. As a \nresponsible bank, it has built a substantial cushion \nagainst any adverse impact with a Provision \nCoverage Ratio of 67.86 per cent. HDFC Bank \ncontinued to deliver value to shareholders, with a \nROE of 14.6 per cent. The Earnings Per Share (EPS) \nincreased by 2.9 per cent to J88.3, while dividend \nper share rose by 12.8 per cent to J22.0 in FY25.\n23,79,786 \n18,83,395 \n27,14,715 \nFY24\nFY25\nFY23\nDeposits (I Cr)\n27,14,715 \n40.2\n40.4\n40.5 \nFY24\nFY25\nFY23\nCost to Income Ratio (%)\n40.5  \n1.24\n1.12 \n1.33 \nFY24\nFY25\nFY23\nGross NPA Ratio (%)\n1.33  \nHDFC Bank Limited\n40\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 203\nDocument type: bank_annual_report\nRelevance score: 0.7743\n\nended March 31, 2025, "
+        },
+        {
+          "type": "tool_call",
+          "name": "calculator",
+          "args": {
+            "expression": "(67347.4-60812.3)/60812.3*100"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "10.7463457228"
+        }
+      ],
+      "sources": [
+        {
+          "citation_id": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.796172559261322,
+          "chunk_id": 124
+        },
+        {
+          "citation_id": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203,
+          "document_type": "bank_annual_report",
+          "score": 0.7743068933486938,
+          "chunk_id": 605
+        },
+        {
+          "citation_id": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5,
+          "document_type": "bank_annual_report",
+          "score": 0.7664605975151062,
+          "chunk_id": 9
+        },
+        {
+          "citation_id": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 8,
+          "document_type": "bank_annual_report",
+          "score": 0.7597033977508545,
+          "chunk_id": 18
+        },
+        {
+          "citation_id": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 443,
+          "document_type": "bank_annual_report",
+          "score": 0.756744384765625,
+          "chunk_id": 1447
+        }
+      ],
+      "numeric_check": {
+        "applicable": true,
+        "passed": true,
+        "checks": [
+          {
+            "expected": 60812.3,
+            "tolerance": 0.5,
+            "matched": true
+          },
+          {
+            "expected": 67347.4,
+            "tolerance": 0.5,
+            "matched": true
+          },
+          {
+            "expected": 6535.1,
+            "tolerance": 0.2,
+            "matched": true
+          },
+          {
+            "expected": 10.7,
+            "tolerance": 0.1,
+            "matched": true
+          }
+        ],
+        "actual_numbers": [
+          60812.3,
+          2023.0,
+          24.0,
+          67347.4,
+          2024.0,
+          25.0,
+          10.7,
+          6535.1,
+          67347.4,
+          60812.3
+        ]
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": true,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": true,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E08",
+      "category": "general",
+      "question": "What can you help me with?",
+      "expected_answer_points": [
+        "Can search financial documents",
+        "Can perform calculations",
+        "Can answer general questions"
+      ],
+      "answer": "I can assist you with anything that involves the financial and regulatory documents in our knowledge base. If you need to locate specific figures, terms, or sections from those reports, I can search the documents and provide you with the exact excerpts and citations. I can also perform precise arithmetic calculations—such as percentages, ratios, or any other numeric operations—using our calculator tool, ensuring the results are accurate and reproducible. For general questions or explanations that don’t require document lookup or calculations, I can simply provide a direct answer. Let me know what you need, and I’ll help you get the information or analysis you’re looking for.",
+      "expected_tools": [],
+      "actual_tools": [],
+      "tool_trace": [],
+      "sources": [],
+      "numeric_check": {
+        "applicable": false,
+        "passed": true,
+        "checks": [],
+        "actual_numbers": []
+      },
+      "unsupported_phrase_detected": null,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": null,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": null,
+        "unsupported_question_handled": null
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E09",
+      "category": "unsupported",
+      "question": "What was Tesla's FY2025 net profit according to the uploaded documents?",
+      "expected_answer_points": [
+        "Must acknowledge that the uploaded documents do not establish this fact",
+        "Must not invent a document citation"
+      ],
+      "answer": "The uploaded documents do not contain any information about Tesla’s FY 2025 net profit, so that figure cannot be provided from the available sources.",
+      "expected_tools": [
+        "financial_search"
+      ],
+      "actual_tools": [
+        "financial_search"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "Tesla FY2025 net profit"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: Paytm_Annual_Report_2024_25.pdf\nPage: 23\nDocument type: fintech_annual_report\nRelevance score: 0.6804\n\nduring FY 2024-25 are as follows:\n \n \nThe Company reported an operating revenue of \nH6,900 Cr. The Company achieved a contribution \nprofit of H3,678 Cr, resulting in a contribution margin \nof 53%. The EBITDA stood at H(1,507) Cr. The Profit \nAfter Tax (PAT) for the year was H(663) Cr, which \nincluded exceptional gains of H1,346 Cr from the sale \nof the entertainment ticketing business. Profit After \nTax (PAT), excluding exceptional items, continued its \nimproving trend, narrowing to H(23) Cr in Q4FY 2024-\n25, and is close to breakeven. Further in Q1FY 2025-26, \nthe Company achieved the milestone of profitability \nand has reported EBITDA and PAT of H72 Cr and H123 \nCr respectively as disclosed on July 22, 2025.\n \n \nOur merchant loan distribution business significantly \nexpanded from H1,386 ...\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 39\nDocument type: bank"
+        },
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "Tesla FY2025 net profit"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: Paytm_Annual_Report_2024_25.pdf\nPage: 23\nDocument type: fintech_annual_report\nRelevance score: 0.6804\n\nduring FY 2024-25 are as follows:\n \n \nThe Company reported an operating revenue of \nH6,900 Cr. The Company achieved a contribution \nprofit of H3,678 Cr, resulting in a contribution margin \nof 53%. The EBITDA stood at H(1,507) Cr. The Profit \nAfter Tax (PAT) for the year was H(663) Cr, which \nincluded exceptional gains of H1,346 Cr from the sale \nof the entertainment ticketing business. Profit After \nTax (PAT), excluding exceptional items, continued its \nimproving trend, narrowing to H(23) Cr in Q4FY 2024-\n25, and is close to breakeven. Further in Q1FY 2025-26, \nthe Company achieved the milestone of profitability \nand has reported EBITDA and PAT of H72 Cr and H123 \nCr respectively as disclosed on July 22, 2025.\n \n \nOur merchant loan distribution business significantly \nexpanded from H1,386 ...\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 39\nDocument type: bank"
+        }
+      ],
+      "sources": [
+        {
+          "citation_id": 1,
+          "source": "Paytm_Annual_Report_2024_25.pdf",
+          "page": 23,
+          "document_type": "fintech_annual_report",
+          "score": 0.6803698539733887,
+          "chunk_id": 3064
+        },
+        {
+          "citation_id": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 39,
+          "document_type": "bank_annual_report",
+          "score": 0.673011064529419,
+          "chunk_id": 125
+        },
+        {
+          "citation_id": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 509,
+          "document_type": "bank_annual_report",
+          "score": 0.6506041288375854,
+          "chunk_id": 1664
+        },
+        {
+          "citation_id": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 204,
+          "document_type": "bank_annual_report",
+          "score": 0.6460608243942261,
+          "chunk_id": 606
+        },
+        {
+          "citation_id": 5,
+          "source": "ICICI_Bank_Annual_Report_2024_25.pdf",
+          "page": 14,
+          "document_type": "bank_annual_report",
+          "score": 0.6400840282440186,
+          "chunk_id": 1930
+        }
+      ],
+      "numeric_check": {
+        "applicable": false,
+        "passed": true,
+        "checks": [],
+        "actual_numbers": [
+          2025.0
+        ]
+      },
+      "unsupported_phrase_detected": true,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": null,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": null,
+        "unsupported_question_handled": true
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    },
+    {
+      "id": "E10",
+      "category": "unsupported",
+      "question": "What was HDFC Bank's net profit in FY2020 according to the uploaded documents?",
+      "expected_answer_points": [
+        "Must acknowledge when the requested figure cannot be established from the retrieved evidence",
+        "Must not invent a figure or citation"
+      ],
+      "answer": "The uploaded documents do not contain any information about HDFC Bank’s net profit for FY 2020. The available excerpts only report net‑profit figures for FY 2023‑24 and FY 2024‑25, and no source provides the FY 2020 amount. Therefore, the requested fact cannot be established from the provided evidence.",
+      "expected_tools": [
+        "financial_search"
+      ],
+      "actual_tools": [
+        "financial_search"
+      ],
+      "tool_trace": [
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "HDFC Bank net profit FY2020"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 203\nDocument type: bank_annual_report\nRelevance score: 0.8106\n\nended March 31, 2025, reached ` 1,68,302.4 crore, reflecting \nan increase of 6.7 per cent over the previous year.\nNet Revenue Distribution\nFY 2023-24\nin ` crore\n80,000\n6.7%\n60,000\n40,000\n20,000\n0\n1,80,000\n1,60,000\n1,40,000\n1,20,000\n1,00,000\nFY 2024-25\nNet Interest Income\nNon-Interest Income\n49,241\n108,532\n45,632\n122,670\n-7.33%\n13.0%\nNet Profit increased by 10.7 per cent to ` 67,347.4 crore from \n` 60,812.3 crore. Return on Average Net Worth was 14.56 \nper cent while Basic Earnings Per Share was ` 88.29 up from \n` 85.83.\nNet Profit\n60,812.3\nFY 2023-24\n70,000\n60,000\n50,000\n40,000\n30,000\n20,000\n10,000\n0\nFY 2024-25\n67,347.4\n80,000\n10.7%\nin ` crore\nTotal Advances grew by 5.4 per cent and Total Deposits grew \nby 14.1 per cent year-on-year. Net Interest Margin (NIM) was \nat 3.48 per cent.\nHDFC ...\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank"
+        },
+        {
+          "type": "tool_call",
+          "name": "financial_search",
+          "args": {
+            "query": "FY2020 net profit HDFC Bank"
+          }
+        },
+        {
+          "type": "tool_result",
+          "content": "[1]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 203\nDocument type: bank_annual_report\nRelevance score: 0.8108\n\nended March 31, 2025, reached ` 1,68,302.4 crore, reflecting \nan increase of 6.7 per cent over the previous year.\nNet Revenue Distribution\nFY 2023-24\nin ` crore\n80,000\n6.7%\n60,000\n40,000\n20,000\n0\n1,80,000\n1,60,000\n1,40,000\n1,20,000\n1,00,000\nFY 2024-25\nNet Interest Income\nNon-Interest Income\n49,241\n108,532\n45,632\n122,670\n-7.33%\n13.0%\nNet Profit increased by 10.7 per cent to ` 67,347.4 crore from \n` 60,812.3 crore. Return on Average Net Worth was 14.56 \nper cent while Basic Earnings Per Share was ` 88.29 up from \n` 85.83.\nNet Profit\n60,812.3\nFY 2023-24\n70,000\n60,000\n50,000\n40,000\n30,000\n20,000\n10,000\n0\nFY 2024-25\n67,347.4\n80,000\n10.7%\nin ` crore\nTotal Advances grew by 5.4 per cent and Total Deposits grew \nby 14.1 per cent year-on-year. Net Interest Margin (NIM) was \nat 3.48 per cent.\nHDFC ...\n\n---\n[2]\nSource: HDFC_Bank_Annual_Report_2024_25.pdf\nPage: 38\nDocument type: bank"
+        }
+      ],
+      "sources": [
+        {
+          "citation_id": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203,
+          "document_type": "bank_annual_report",
+          "score": 0.8105627298355103,
+          "chunk_id": 605
+        },
+        {
+          "citation_id": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "document_type": "bank_annual_report",
+          "score": 0.8029417395591736,
+          "chunk_id": 124
+        },
+        {
+          "citation_id": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5,
+          "document_type": "bank_annual_report",
+          "score": 0.7986307144165039,
+          "chunk_id": 9
+        },
+        {
+          "citation_id": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 443,
+          "document_type": "bank_annual_report",
+          "score": 0.7825723886489868,
+          "chunk_id": 1447
+        },
+        {
+          "citation_id": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 8,
+          "document_type": "bank_annual_report",
+          "score": 0.7825192213058472,
+          "chunk_id": 18
+        }
+      ],
+      "numeric_check": {
+        "applicable": false,
+        "passed": true,
+        "checks": [],
+        "actual_numbers": [
+          2020.0,
+          2023.0,
+          24.0,
+          2024.0,
+          25.0,
+          2020.0
+        ]
+      },
+      "unsupported_phrase_detected": true,
+      "checks": {
+        "answer_nonempty": true,
+        "tool_routing": true,
+        "expected_source_retrieved": null,
+        "citation_mapping_valid": true,
+        "source_grounding": true,
+        "numerical_facts": null,
+        "unsupported_question_handled": true
+      },
+      "automated_pass": true,
+      "manual_review_required": true
+    }
+  ]
+}

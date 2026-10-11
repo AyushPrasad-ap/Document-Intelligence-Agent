@@ -1,22 +1,41 @@
-# Virtual environment
+
+# Python environments
 .venv/
+venv/
 
-# Environment variables
+# Secrets and local environment files
 .env
+.env.*
+!.env.example
 
-# Python
+# Python caches and test artifacts
 __pycache__/
 *.py[cod]
 .pytest_cache/
 
-# IDE
+# IDE and operating-system files
 .vscode/
-
-# Generated data
-data/processed/
-*.faiss
-*.pkl
-
-# OS
 .DS_Store
 Thumbs.db
+
+# Original source documents
+# Supply these locally if rebuilding the vector store
+data/raw/
+
+# Ignore processed artifacts by default
+data/processed/*
+
+# Preserve the FAISS vector store required at runtime
+!data/processed/faiss_store/
+data/processed/faiss_store/*
+!data/processed/faiss_store/index.faiss
+!data/processed/faiss_store/metadata.json
+
+# Other generated artifacts and backups
+*.pkl
+*.backup
+
+# Preserve evaluation results for the portfolio
+!data/processed/retrieval_evaluation_results.json
+!data/processed/answer_evaluation_results.json
+!data/processed/evaluation_report.md

@@ -26,9 +26,11 @@ def get_llm() -> ChatGroq:
     return ChatGroq(
         model=get_model_name(),
         temperature=0.2,
-        max_tokens=1024,
-        max_retries=3,
-        timeout=60,
+        max_tokens=2048,
+        reasoning_effort="low",
+        reasoning_format="hidden",
+        max_retries=0,
+        timeout=30,
     )
 
 

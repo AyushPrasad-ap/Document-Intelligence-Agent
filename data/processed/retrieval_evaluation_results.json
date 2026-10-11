@@ -1,0 +1,279 @@
+{
+  "top_k": 5,
+  "evaluated_questions": 5,
+  "hit_at_5_rate": 1.0,
+  "mean_reciprocal_rank": 0.8,
+  "results": [
+    {
+      "id": "E01",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's net profit in FY25?",
+      "expected_pages": [
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5
+        },
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 15
+        },
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203
+        }
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5,
+          "score": 0.7904009222984314,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203,
+          "score": 0.7854986190795898,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "score": 0.7840973138809204,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 15,
+          "score": 0.7812917828559875,
+          "relevant": true
+        },
+        {
+          "rank": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 237,
+          "score": 0.7747467756271362,
+          "relevant": false
+        }
+      ],
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "E02",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's net profit in FY24?",
+      "expected_pages": [
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203
+        }
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "score": 0.7882356643676758,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203,
+          "score": 0.7737448215484619,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5,
+          "score": 0.7657808065414429,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 237,
+          "score": 0.7645498514175415,
+          "relevant": false
+        },
+        {
+          "rank": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 210,
+          "score": 0.7558567523956299,
+          "relevant": false
+        }
+      ],
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "E03",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's net interest margin in FY25?",
+      "expected_pages": [
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38
+        },
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203
+        }
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "score": 0.8235051035881042,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "score": 0.7821996808052063,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 15,
+          "score": 0.7744841575622559,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 51,
+          "score": 0.7732782363891602,
+          "relevant": false
+        },
+        {
+          "rank": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 15,
+          "score": 0.7710727453231812,
+          "relevant": false
+        }
+      ],
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "E04",
+      "category": "financial_retrieval",
+      "question": "What was HDFC Bank's capital adequacy ratio in FY25?",
+      "expected_pages": [
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 8
+        },
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38
+        }
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "score": 0.8066087961196899,
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 238,
+          "score": 0.7836564779281616,
+          "relevant": false
+        },
+        {
+          "rank": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 341,
+          "score": 0.7798315286636353,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 50,
+          "score": 0.7733727097511292,
+          "relevant": false
+        },
+        {
+          "rank": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 51,
+          "score": 0.770295262336731,
+          "relevant": false
+        }
+      ],
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "E07",
+      "category": "multi_step",
+      "question": "What was HDFC Bank's net profit growth from FY24 to FY25, and what was the absolute increase?",
+      "expected_pages": [
+        {
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203
+        }
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 15,
+          "score": 0.8011766672134399,
+          "relevant": false
+        },
+        {
+          "rank": 2,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 203,
+          "score": 0.7837793827056885,
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "score": 0.7774306535720825,
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 5,
+          "score": 0.7632056474685669,
+          "relevant": false
+        },
+        {
+          "rank": 5,
+          "source": "HDFC_Bank_Annual_Report_2024_25.pdf",
+          "page": 38,
+          "score": 0.7607385516166687,
+          "relevant": false
+        }
+      ],
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    }
+  ]
+}
